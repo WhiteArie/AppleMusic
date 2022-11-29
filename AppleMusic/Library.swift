@@ -104,7 +104,9 @@ struct Library_Previews: PreviewProvider {
 }
 
 extension  Library: TrackMovingDelegate{
-    func MoveBackForPreviousTrack() -> SearchViewModel.Cell? {
+    
+    
+    func moveBackForPreviousTrack() -> SearchViewModel.Cell? {
         let index = tracks.firstIndex(of: track)
         guard let myIndex = index else { return nil }
         var nextTrack: SearchViewModel.Cell
@@ -117,7 +119,7 @@ extension  Library: TrackMovingDelegate{
         return nextTrack
     }
     
-    func MoveForwardForPreviousTrack() -> SearchViewModel.Cell? {
+    func moveForwardForPreviousTrack() -> SearchViewModel.Cell? {
         let index = tracks.firstIndex(of: track)
         guard let myIndex = index else { return nil }
         var nextTrack: SearchViewModel.Cell
